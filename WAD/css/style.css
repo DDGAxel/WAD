@@ -1,0 +1,136 @@
+
+.top{
+    background-image: url("../images/Wallpaper.jpg");
+    background-position: center;
+    height: 25vh;
+    margin-left: 1px;
+    margin-right: 0.25px;
+}
+
+.body-menu{
+    height: 90vh;
+    background-color: #ffd24d;
+}
+
+.mainbar{
+    background-color: #ffd24d;
+    color: black;
+    margin-left: 14px;
+    margin-right: 14px;
+    margin-top: 2px;
+    margin-bottom: 8px;
+}
+
+.whole-body{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.search{
+    border-radius: 25px;
+}
+
+.login{
+    color:#000000;
+}
+
+.login-text{
+    color:#000000;
+    font-weight: bold;
+}
+
+.cart{
+    color:#000000;
+}
+
+.cart-text{
+    color:#000000;
+    font-weight: bold;
+}
+
+.menuless-body{
+    background-color: #ffd24d;
+    height: 80vh;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.info{
+    position: center;
+    margin-top: 15px;
+    margin-left: 50px;
+}
+
+.login-register{
+    background-color: #ffd24d;
+    height: 100vh;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.productbox {
+    background-color:#ffffff;
+	padding: 15px;
+	margin-bottom:20px;
+	-webkit-box-shadow: 0 16px 10px -1px  #999;
+	   -moz-box-shadow: 0 16px 10px -1px  #999;
+	        box-shadow: 0 16px 10px -1px #999;
+
+}
+.productbox:hover {
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.producttitle {
+    font-weight:bold;
+	padding:5px 0 5px 0;
+}
+
+.productprice {
+	border-top:1px solid #dadada;
+	padding-top:5px;
+}
+
+.pricetext {
+	font-weight:bold;
+	font-size:1.2em;
+}
+
+.badge{
+    background-color: #000000;
+}
+
+.cart-table>tr, td{
+    border-bottom: 1px solid #000000;
+}
+
+.cart-header{
+    border: 1px solid #000000;
+    background-color: #ffd24d;
+}
+
+.cart-table{
+    border-bottom: 4px solid #000000;
+}
+
+.checkout{
+    background-color: #ffd24d;
+    border-color: #ffd24d;
+}
+
+.checkout:hover{
+    background-color: #ffd24d;
+    border-color: #ffd24d;
+}
+
+.continue-shopping{
+    margin-bottom: 5px;
+    margin-top: 4px;
+    background-color: #ffd24d;
+    border-color: #000000;  
+}
+
+.continue-shopping:hover{
+    background-color: #ffd24d;
+    border-color: #000000;
+}

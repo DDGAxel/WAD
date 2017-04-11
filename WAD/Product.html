@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+      <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+      </head>
+      <body>
+      <div class="container-fluid">
+          <div class="row top">
+            <div class="col-sm-12">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="Loginscreen.html"><span class="glyphicon glyphicon-user login"></span><span class="login-text"> Login </span></a></li>
+                <li><a href="Shoppingcart.html"><span class="badge">0</span><span class="glyphicon glyphicon-shopping-cart cart"></span><span class="cart-text"> Cart </span></a></li>
+              </ul>        
+            </div> 
+          </div>      
+      </div>
+
+      <nav class="navbar navbar-default mainbar">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li><a href="Index.html">Home</a></li>
+                <li><a data-toggle="collapse" href="#collapse1">Genre</a>
+                    <div id="collapse1" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">Adventure</li>
+                            <li class="list-group-item">Horror</li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a data-toggle="collapse" href="#collapse2">Price</a>
+                    <div id="collapse2" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">Low price To High price</li>
+                            <li class="list-group-item">High price To Low price</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-right">
+            <div class="form-group">
+                <input type="text" class="form-control  search" placeholder="Search">
+            </div>
+            <button type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+            </form> 
+        </div>
+        </nav>
+
+    <div class="container-fluid whole-body">
+      <div class="row">
+        <div class="col-sm-10">
+            <div class="row">
+                <div class="col-sm-5">
+                    <img src="images/TempBook.png" class="img-responsive"></a>
+                </div>
+
+                <div class="col-sm-5">
+                    <h2>Name</h2>
+                    <h5>Genre:</h5>
+                    <h5>Author:</h5>
+                    <h5>Edition:</h5>
+                    <h5>Description:</h5>
+                    <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">Add to cart</a></div><div class="pricetext">??? RON</div></div>
+                </div>
+            </div>
+        </div>
+      </div>
+          <div class="row">
+                  <h1>Releated Products</h1>
+              <img src="images/TempBook.png" class="img-responsive"></a>
+          <div class="row">
+              <div class="col-sm-10">
+                  <h1>Reviews</h1>
+                  <!--  Product Reviews List -->
+                  <ul>
+                  <h4>Reviews</h4>
+                  <li ng-repeat="review in product.reviews">
+                    <blockquote>
+                      <strong>{{review.stars}} Stars</strong>
+                      {{review.body}}
+                      <cite class="clearfix">—{{review.author}}</cite>
+                    </blockquote>
+                  </li>
+                </ul>
+
+                <!--  Review Form -->
+                <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)">
+
+                  <!--  Live Preview -->
+                  <blockquote >
+                    <strong>{{reviewCtrl.review.stars}} Stars</strong>
+                    {{reviewCtrl.review.body}}
+                    <cite class="clearfix">—{{reviewCtrl.review.author}}</cite>
+                  </blockquote>
+
+                  <!--  Review Form -->
+                  <h4>Submit a Review</h4>
+                  <fieldset class="form-group">
+                    <select ng-model="reviewCtrl.review.stars" class="form-control" ng-options="stars for stars in [5,4,3,2,1]" title="Stars">
+                      <option value>Rate the Product</option>
+                    </select>
+                  </fieldset>
+                  <fieldset class="form-group">
+                    <textarea ng-model="reviewCtrl.review.body" class="form-control" placeholder="Write a short review of the product..." title="Review"></textarea>
+                  </fieldset>
+                  <fieldset class="form-group">
+                    <input ng-model="reviewCtrl.review.author" type="email" class="form-control" placeholder="jimmyDean@example.org" title="Email" />
+                  </fieldset>
+                  <fieldset class="form-group">
+                    <input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
+                  </fieldset>
+                </form>
+            </div>
+    </body>
+</html>
